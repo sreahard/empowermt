@@ -8,45 +8,45 @@ get_header();
 
 
 if ( get_option( 'show_on_front' ) == 'page' ): ?>
-  			<section id="features-two">
-				<div class="wrap">
-					<h3>
-						<?php the_title(); ?>
-					</h3><!--/h3-->
-				</div><!--/div .wrapper-->
-			</section><!--/section .wide-nav-->
-			<div class="wrap cf">
-				<div class="content-left">
-					<div class="front-page-article">
-						<?php
-							if ( have_posts() ) : 
-							
-								while ( have_posts() ) : the_post();
-							
-									the_content(); 
-								
-								endwhile; 
+<section id="features-two">
+	<div class="wrap">
+		<h3>
+			<?php the_title(); ?>
+		</h3><!--/h3-->
+	</div><!--/div .wrapper-->
+</section><!--/section .wide-nav-->
+<div class="wrap cf">
+	<div class="content-left">
+		<div class="front-page-article">
+			<?php
+			if ( have_posts() ) : 
 
-							endif; 
-						?>
-					
-					</div>
-				</div>	
-				<?php get_sidebar(); ?>
-			</div><!--/div .wrapper-->
-		
+				while ( have_posts() ) : the_post();
+
+			the_content(); 
+
+			endwhile; 
+
+			endif; 
+			?>
+
+		</div>
+	</div>	
+	<?php get_sidebar(); ?>
+</div><!--/div .wrapper-->
+
 <?php		
 else:
 
-get_template_part( 'includes/subheader' ); ?>
+	get_template_part( 'includes/subheader' ); ?>
 <section id="features-two">
 	<div class="wrap">
 		<?php
-			if ( get_theme_mod( 'cw_business_lite_frontpage_subheader_title',__('Why Choose Us?','cw-business-lite') ) ) {
-				echo '<h3>';
-					echo get_theme_mod( 'cw_business_lite_frontpage_subheader_title',__('Why Choose Us?','cw-business-lite') );
-				echo '</h3>';	
-			}
+		if ( get_theme_mod( 'cw_business_lite_frontpage_subheader_title',__('Why Choose Us?','cw-business-lite') ) ) {
+			echo '<h3>';
+			echo get_theme_mod( 'cw_business_lite_frontpage_subheader_title',__('Why Choose Us?','cw-business-lite') );
+			echo '</h3>';	
+		}
 		?>
 		<div class="features-two-container">
 			<div class="features-box">
@@ -65,7 +65,7 @@ get_template_part( 'includes/subheader' ); ?>
 				
 				if ( get_theme_mod( 'cw_business_lite_frontpage_firstlybox_title',__('Fast &amp; Safe','cw-business-lite') ) ) {
 					echo '<h4>';
-						echo get_theme_mod( 'cw_business_lite_frontpage_firstlybox_title',__('Fast &amp; Safe','cw-business-lite') );
+					echo get_theme_mod( 'cw_business_lite_frontpage_firstlybox_title',__('Fast &amp; Safe','cw-business-lite') );
 					echo '</h4>';
 				} 
 				if( !empty($cw_business_lite_frontpage_firstlybox_link) ):
@@ -90,7 +90,7 @@ get_template_part( 'includes/subheader' ); ?>
 				
 				if ( get_theme_mod( 'cw_business_lite_frontpage_secondlybox_title',__('24/ 7 Support','cw-business-lite') ) ) {
 					echo '<h4>';
-						echo get_theme_mod( 'cw_business_lite_frontpage_secondlybox_title',__('24/ 7 Support','cw-business-lite') );
+					echo get_theme_mod( 'cw_business_lite_frontpage_secondlybox_title',__('24/ 7 Support','cw-business-lite') );
 					echo '</h4>';	
 				}
 				
@@ -134,12 +134,12 @@ get_template_part( 'includes/subheader' ); ?>
 <div class="wrap">
 	<article id="content-article">
 		<?php
-			$cw_business_lite_frontpage_thecontent_image = get_theme_mod('cw_business_lite_frontpage_thecontent_image', get_template_directory_uri().'/images/index-article-image.png');
-			if( !empty($cw_business_lite_frontpage_thecontent_image) ):
-				echo '<div class="content-article-image">';
-					echo '<img src="'.esc_url($cw_business_lite_frontpage_thecontent_image).'" alt="Index Article Image" title="Index Article Image" />';
-				echo '</div>';
-			endif;
+		$cw_business_lite_frontpage_thecontent_image = get_theme_mod('cw_business_lite_frontpage_thecontent_image', get_template_directory_uri().'/images/index-article-image.png');
+		if( !empty($cw_business_lite_frontpage_thecontent_image) ):
+			echo '<div class="content-article-image">';
+		echo '<img src="'.esc_url($cw_business_lite_frontpage_thecontent_image).'" alt="Index Article Image" title="Index Article Image" />';
+		echo '</div>';
+		endif;
 		?>
 		
 		<h2>
@@ -159,58 +159,121 @@ get_template_part( 'includes/subheader' ); ?>
 	</article><!--/#content-article-->
 </div><!--/.wrap-->
 <div class="clearfix"></div>
-<div class="wrap">
+<!-- <div class="wrap"> -->
 
-	<section class="content">
-		<div class="title-border">
-			<h3>
-				<?php
-				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_title',__('Our Clients','cw-business-lite') ) ) {
-					echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_title',__('Our Clients','cw-business-lite') );
-				}
-				?>
-			</h3>
-		</div><!--/.title-border-->
-		<div class="our-clients">
-				<?php
-				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo1',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
+<section class="content">
+	<div class="title-border">
+		<h3>
+			<?php
+			if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_title',__('Our Clients','cw-business-lite') ) ) {
+				echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_title',__('Our Clients','cw-business-lite') );
+			}
+			?>
+		</h3>
+	</div><!--/.title-border-->
+</section>
+<section id="features-three">
+	<div class="features-three-container">
+		<div class="features-box">
+			<div class="testimonial">	
+				<div class="overlay">
+					<blockquote>
+						<?php
+						if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote1',get_template_directory_uri().'/images/logo_default.png' ) ) {
+							echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote1',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','cw-business-lite') );}
+							?>
+						</blockquote>
+					</div>
+
+					<?php
+					if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo1',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
 					<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo1',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 1" />
-				<?php }
-				?>
+					<?php }
+					?>
+				</div>
+			</div>
 
-				<?php
-				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo2',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
-					<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo2',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 2" />
-				<?php }
-				?>
+			<div class="features-box">
+				<div class="testimonial">	
+					<div class="overlay">
+						<blockquote>
+							<?php
+							if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote2',get_template_directory_uri().'/images/logo_default.png' ) ) {
+								echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote2',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','cw-business-lite') );}
+								?>
+							</blockquote>
+						</div>
+						<?php
+						if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo2',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
+						<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo2',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 2" />
+						<?php }
+						?>
+					</div>
+				</div>
 
-				<?php
-				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo3',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
-					<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo3',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 3" />
-				<?php }
-				?>
+			<div class="features-box">
+				<div class="testimonial">	
+					<div class="overlay">
+						<blockquote>
+							<?php
+							if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote3',get_template_directory_uri().'/images/logo_default.png' ) ) {
+								echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote3',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','cw-business-lite') );}
+								?>
+							</blockquote>
+						</div>
 
-				<?php
-				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo4',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
-					<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo4',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 4" />
-				<?php }
-				?>
+						<?php
+						if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo3',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
+						<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo3',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 3" />
+						<?php }
+						?>
+					</div>
+				</div>
 
-				<?php
-				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo5',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
-					<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo5',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 5" />
-				<?php }
-				?>
+			<div class="features-box">
+				<div class="testimonial">	
+					<div class="overlay">
+						<blockquote>
+							<?php
+							if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote4',get_template_directory_uri().'/images/logo_default.png' ) ) {
+								echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote4',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','cw-business-lite') );}
+								?>
+							</blockquote>
+						</div>
+						<?php
+						if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo4',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
+						<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo4',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 4" />
+						<?php }
+						?>
+					</div>
+				</div>
+
+			<div class="features-box">
+				<div class="testimonial">	
+					<div class="overlay">
+						<blockquote>
+							<?php
+							if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote5',get_template_directory_uri().'/images/logo_default.png' ) ) {
+								echo get_theme_mod( 'cw_business_lite_frontpage_ourclients_quote5',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','cw-business-lite') );}
+								?>
+							</blockquote>
+						</div>
+						<?php
+						if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo5',get_template_directory_uri().'/images/logo_default.png' ) ) { ?>
+						<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo5',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 5" />
+						<?php }
+						?>
+					</div>
+				</div>
 
 <!-- 				<?php
 				if ( get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo6',get_template_directory_uri().'http://lorempixel.com/250/250/people/6' ) ) { ?>
 					<img src="<?php echo esc_url(get_theme_mod( 'cw_business_lite_frontpage_ourclients_logo6',get_template_directory_uri().'/images/logo_default.png' )); ?>" alt="Sponsor 6" />
 				<?php }
 				?> -->
-
-		</div><!--/.our-clients-->
-	</section><!--/.content-->
-</div><!--/.wrap-->
+			</div><!--/.our-clients-->
+		</section><!--/.content-->
+	</div><!--/.wrap-->
 
 <?php endif; ?>
 <?php get_footer(); ?>

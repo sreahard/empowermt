@@ -10,6 +10,7 @@
 	<head <?php language_attributes(); ?>>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link href="css/custom-editor-style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,400italic,700italic|Oswald:300|Lobster' rel='stylesheet' type='text/css'>
 		<title><?php wp_title('|', true, 'right'); ?></title> 
 		<?php wp_head(); ?>
