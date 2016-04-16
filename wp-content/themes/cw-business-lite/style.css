@@ -1164,7 +1164,7 @@ footer {
 }
 /* line 947, sass/style.scss */
 #features-three .features-box {
-
+  width:250px;
   float: left;
 }
 /*
@@ -4517,6 +4517,7 @@ ul .cat-item > ul.children > li > ul  > li  {
   position: relative;
   text-align: center;
   z-index:1;
+  width:250px;
 }
 .testimonial .overlay {
   background: none repeat scroll 0 0 rgba(37, 43, 51, 0.0);
@@ -4524,7 +4525,7 @@ ul .cat-item > ul.children > li > ul  > li  {
   z-index: 2;
 }
 .testimonial:hover .overlay {
-  background: none repeat scroll 0 0 rgba(37, 43, 51, 0.6);
+  background: none repeat scroll 0 0 rgba(242, 103, 34, 0.6);
 }  
 .testimonial .overlay, .testimonial blockquote {
   height: 100%;
@@ -4549,7 +4550,7 @@ ul .cat-item > ul.children > li > ul  > li  {
 .testimonial blockquote:before {
   color: #fff;
   font-style: normal !important;
-  font-family: "Philosopher" !important;
+  font-family: "Oswald" !important;
   content: "“";
   position: relative;
   font-size:4em;
@@ -4564,11 +4565,11 @@ ul .cat-item > ul.children > li > ul  > li  {
 }
 .testimonial blockquote cite {
     color: #fff;
-  font-family: "Philosopher" !important;
+  font-family: "Oswald" !important;
 }
 .testimonial blockquote p {
   color: #fff;
-  font-family: "Philosopher" !important;
+  font-family: "Oswald" !important;
   font-size: 1.5em !important;;
   line-height: 1.65em !important;;
   letter-spacing: 0px !important;;

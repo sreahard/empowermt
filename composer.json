@@ -1,1 +1,13 @@
-{ "require": { "hhvm": "3.2.0" } }
+{
+    "name": "sreahard/empower-mt",
+    "require": {
+        "hhvm": "3.2.0"
+    },
+    "authors": [
+        {
+            "name": "sreahard",
+            "email": "suziequz@msn.com"
+        }
+    ],
+    "require": {}
+}
